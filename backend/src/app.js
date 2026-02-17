@@ -19,12 +19,12 @@ app.use(cors({
 }));
 
 // ─── Rate Limiting ─────────────────────────────────────────────────────────
-const limiter = rateLimit({
+/*const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100,
   message: { error: 'Trop de requêtes, veuillez réessayer plus tard.' }
 });
-app.use('/api/', limiter);
+app.use('/api/', limiter);*/
 
 // ─── Body Parsing ──────────────────────────────────────────────────────────
 app.use(express.json({ limit: '10mb' }));
